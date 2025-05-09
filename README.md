@@ -31,9 +31,13 @@ Then from sidecar pod1 to it goes to SIDECAR pod2..and once it's authorised goes
 CANARY:
 Istio also can handle canary or distribution of traffic weighted to new version.
 
+ISTioD:
 
 
 ### Admission Controllers
+It will talk to apiserver and gets info of any new pods requested to be created.
+It will give info to istio and it takes care of creating SIDECAR container on new pods incoming.
+
 
 Admission controllers in Kubernetes enforce policies on objects during their creation or modification. They intercept requests to the Kubernetes API server before objects are persisted and can modify or deny requests based on predefined rules.
 
