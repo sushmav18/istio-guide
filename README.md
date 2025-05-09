@@ -14,6 +14,24 @@ For that concept of mutual TLS has to be implemented, every pod of every applica
 
 HOW??
 
+Istio does that work for us....when the istio is installed it communicates with api server and gets the details of pods being deployed and also the new pods in place. For new pods also istio provide the TLS certs.
+
+SIDECAR CONTAINER:
+ENVOY PROXY ON EACH POD
+
+it creates an SIDECAR CONTAINER on every pods and the SIDECAR container manages everything.
+It eliminates the need to alter application code and requirements on developer to create the clumsiness and handle certs also.
+It attachees envoy proxy onto every SIDECAR container.
+
+MTLS :
+Any traffic hitting the pod first ,goes through side car and there TLS is verified and response from that pod again goes via side car proxy.
+
+Then from sidecar pod1 to it goes to SIDECAR pod2..and once it's authorised goes to pod2 within.
+
+CANARY:
+Istio also can handle canary or distribution of traffic weighted to new version.
+
+
 
 ### Admission Controllers
 
