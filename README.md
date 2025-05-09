@@ -58,6 +58,8 @@ Service meshes address challenges in managing microservices architectures by off
 Traffic management in a service mesh involves controlling the flow of requests between services. This includes features such as load balancing, routing, traffic shaping, and fault tolerance mechanisms like retries and circuit breaking.
 
 ### Virtual Services
+virtual service, destination are custom resources created in k8s aspart of istio.
+These help in the traffic management of istio, this helping to implement canary model of deployment.
 
 Virtual services in Istio define how incoming requests to a service should be routed to different versions or subsets of that service. They enable sophisticated traffic management strategies like A/B testing and canary deployments.
 
