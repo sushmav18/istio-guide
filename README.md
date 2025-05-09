@@ -1,5 +1,20 @@
 # Istio
 
+
+
+### Traffic in any cluster 
+North South traffic:
+From external to Ingress controller that is protected by adding certificate at ingress or Load balancer level. An Tls certificate is attached there and the TLS is terminated at ingress level.
+
+East West traffic:
+Between the micro services inside the cluster.
+If micro service 1 has to talk to micro service 2 , that traffic also should be encrypted and secured.
+
+For that concept of mutual TLS has to be implemented, every pod of every application will have an TLS cert Attatched to that and communication internally is secured.
+
+HOW??
+
+
 ### Admission Controllers
 
 Admission controllers in Kubernetes enforce policies on objects during their creation or modification. They intercept requests to the Kubernetes API server before objects are persisted and can modify or deny requests based on predefined rules.
