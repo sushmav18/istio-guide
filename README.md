@@ -23,6 +23,10 @@ it creates an SIDECAR CONTAINER on every pods and the SIDECAR container manages 
 It eliminates the need to alter application code and requirements on developer to create the clumsiness and handle certs also.
 It attachees envoy proxy onto every SIDECAR container.
 
+MAIN FEATURES:
+mUTUAL TLS
+CANARY
+
 MTLS :
 Any traffic hitting the pod first ,goes through side car and there TLS is verified and response from that pod again goes via side car proxy.
 
